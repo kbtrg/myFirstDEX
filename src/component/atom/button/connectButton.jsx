@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import React from 'react'
 
 import { Button } from '@chakra-ui/react'
 import { connectWallet } from '../../../fook/connectWallet'
 
 export const ConnectButton = () => {
-  const [text, setText] = useState('Connect Wallet')
+  const [text, setText] = React.useState('Connect Wallet')
   const handleConnectWallet = () => connectWallet()
   return (
     <>
