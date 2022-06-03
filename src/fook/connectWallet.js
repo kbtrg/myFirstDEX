@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import Web3 from 'web3'
 
-let buyMode = true
+// let buyMode = true
 let web3, user
 
 export const connectWallet = async () => {
@@ -12,10 +12,12 @@ export const connectWallet = async () => {
 
   try {
     const accounts = await window.ethereum.request({
-      method: 'eth_requsetAccounts',
+      method: 'eth_requestAccounts',
     })
-    user = accounts[0]
+    user = await accounts[0]
   } catch (error) {
     alert(error.message)
   }
+
+  return user
 }
