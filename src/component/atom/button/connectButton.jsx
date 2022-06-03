@@ -7,11 +7,11 @@ export const ConnectButton = () => {
   const [text, setText] = React.useState('Connect Wallet')
   const handleConnectWallet = async () => {
     const user = await connectWallet()
-    let shortText =
+    let shortAddress =
       user.substring(0, 3) +
       '...' +
       user.substring(user.length - 4, user.length)
-    setText(shortText)
+    setText(shortAddress)
   }
 
   return (

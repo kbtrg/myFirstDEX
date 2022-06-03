@@ -18,7 +18,7 @@ export const SwapBox = () => {
         alignItems='center'
         bg='#ebfff0'
       >
-        <Box w='600px' mb='100px' p='30px' bg='white'>
+        <Box w='500px' mb='100px' p='30px' bg='white'>
           <Box fontSize='30px' fontWeight='600' mb='50px'>
             Swap
           </Box>
