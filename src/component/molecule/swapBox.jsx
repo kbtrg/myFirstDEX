@@ -3,11 +3,18 @@ import React from 'react'
 import { Box, Center } from '@chakra-ui/react'
 
 import { InputAmountBox } from '../atom/input/inputAmountBox'
+import { OutputAmountBox } from '../atom/input/outputAmountBox'
 import { SwapArrow } from '../atom/button/swapArrow'
 import { DisplayExchangeRate } from '../atom/block/displayExchangeRate'
 import { SwapButton } from '../atom/button/swapButton'
 
 export const SwapBox = () => {
+  const [inputAmount, setInputAmount] = React.useState(0)
+  const handleInputAmount = (value) => {
+    setInputAmount(value)
+  }
+  console.log(inputAmount)
+
   return (
     <>
       <Box
@@ -22,11 +29,13 @@ export const SwapBox = () => {
           <Box fontSize='30px' fontWeight='600' mb='50px'>
             Swap
           </Box>
-          <InputAmountBox></InputAmountBox>
+          <InputAmountBox
+            handleInputAmount={handleInputAmount}
+          ></InputAmountBox>
           <Center>
             <SwapArrow></SwapArrow>
           </Center>
-          <InputAmountBox></InputAmountBox>
+          <OutputAmountBox inputAmount={inputAmount}></OutputAmountBox>
           <DisplayExchangeRate></DisplayExchangeRate>
           <SwapButton></SwapButton>
         </Box>
@@ -34,3 +43,5 @@ export const SwapBox = () => {
     </>
   )
 }
+
+// InputAmountBoxから受け取ったinputAmountを、OutputAmountBoxに渡したい。。
