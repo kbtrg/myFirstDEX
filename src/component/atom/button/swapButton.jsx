@@ -6,7 +6,7 @@ export const SwapButton = () => {
   return (
     <>
       <Center>
-        <Button mt='30px' colorScheme='teal' variant='solid' w='300px' h='50px'>
+        <Button mt='50px' colorScheme='teal' variant='solid' w='300px' h='50px'>
           Swap
         </Button>
       </Center>

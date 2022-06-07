@@ -5,7 +5,6 @@ import { Box, Center } from '@chakra-ui/react'
 import { InputAmountBox } from '../atom/input/inputAmountBox'
 import { OutputAmountBox } from '../atom/input/outputAmountBox'
 import { SwapArrow } from '../atom/button/swapArrow'
-import { DisplayExchangeRate } from '../atom/block/displayExchangeRate'
 import { SwapButton } from '../atom/button/swapButton'
 
 export const SwapBox = () => {
@@ -13,7 +12,7 @@ export const SwapBox = () => {
   const handleInputAmount = (value) => {
     setInputAmount(value)
   }
-  console.log(inputAmount)
+  //console.log(inputAmount)
 
   return (
     <>
@@ -36,7 +35,6 @@ export const SwapBox = () => {
             <SwapArrow></SwapArrow>
           </Center>
           <OutputAmountBox inputAmount={inputAmount}></OutputAmountBox>
-          <DisplayExchangeRate></DisplayExchangeRate>
           <SwapButton></SwapButton>
         </Box>
       </Box>
